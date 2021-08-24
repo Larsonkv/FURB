@@ -85,5 +85,22 @@ public class ListaEncadeada <T>{
 		
 		return p;
 	}
+	
+	public String toString() {
+		String resultado ="";
+		NoLista<T> p = primeiro;
+		
+		while(p != null){
+			
+			if(p != primeiro)
+				resultado +=",";
+			
+		resultado += p.getInfo().toString();
+		p = p.getProximo();
+		
+		}
+		
+		return resultado;
+	}
 		
 }
