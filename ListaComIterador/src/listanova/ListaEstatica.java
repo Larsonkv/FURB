@@ -2,7 +2,7 @@ package listanova;
 
 import java.util.Iterator;
 
-public class ListaEstatica <ClasseInformadaProgramador> implements Iterator{
+public class ListaEstatica <ClasseInformadaProgramador> implements Iterable{
 
 	private ClasseInformadaProgramador[] info;
 	private int tamanho;
@@ -130,17 +130,5 @@ public class ListaEstatica <ClasseInformadaProgramador> implements Iterator{
 			ponteiro++;
 			return info[backup];
 		}
-	}
-
-	@Override
-	public boolean hasNext() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public Object next() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }
