@@ -1,7 +1,7 @@
 package listanova;
 
 
-public class ListaEstatica {
+public class ListaEstatica<ClasseInformadaProgramador>{
 
 	private Integer[] info;
 	private int tamanho;
