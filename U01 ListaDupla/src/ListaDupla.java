@@ -93,7 +93,6 @@ public class ListaDupla <T>{
 	public String toString() {
 		String resultado ="";
 		NoListaDupla<T> p = primeiro;
-		
 		while(p != null){
 			
 			if(p != primeiro)

@@ -1,14 +1,16 @@
 public class ListaEncadeada <T>{
 	
 	private NoLista<T> primeiro;
+	private NoLista<T> ultimo;
 	
 	public ListaEncadeada()   {
 		primeiro = null;
+		ultimo = null;
 	}
 	
 	public NoLista<T> getPrimeiro() {
 	// retornar No
-		return this.primeiro;
+		return primeiro;
 	}
 	
 	public void inserir(T info) {
@@ -16,12 +18,30 @@ public class ListaEncadeada <T>{
 		NoLista<T> novo = new NoLista<>();
 		novo.setInfo(info);
 		novo.setProximo(this.primeiro);
+		
+		if(estaVazia()) {
+			ultimo=novo;
+		}
+		
 		this.primeiro = novo;
 	}
 	
+	public void inserirNoFinal(T info) {
+		// retornar void
+			NoLista<T> novo = new NoLista<>();
+			novo.setInfo(info);
+			novo.setProximo(null);
+			if(estaVazia())
+				primeiro=novo;
+			else {
+				ultimo.setProximo(novo);
+			}
+			ultimo = novo;
+		}
+	
 	public boolean estaVazia() {
 	// retornar boolean
-		return this.primeiro ==null;
+		return this.primeiro == null;
 	}
 	
 	public NoLista<T> buscar(T valor) {
@@ -49,11 +69,15 @@ public class ListaEncadeada <T>{
 	}
 	
 	if(p != null) {
-		if(p == primeiro) {
-			primeiro = primeiro.getProximo();
-		}else {
+		if(p == primeiro) 
+			this.primeiro = primeiro.getProximo();
+		
+		else 
 			anterior.setProximo(p.getProximo());
-			}
+			
+		if(p==ultimo) 
+			ultimo = anterior;
+			
 		}
 	}
 	

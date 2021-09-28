@@ -1,9 +1,9 @@
 package listanova;
 
 
-public class ListaEstatica <ClasseInformadaProgramador> {
+public class ListaEstatica {
 
-	private ClasseInformadaProgramador[] info;
+	private Integer[] info;
 	private int tamanho;
 	
 	public ListaEstatica() {
@@ -11,12 +11,15 @@ public class ListaEstatica <ClasseInformadaProgramador> {
 		tamanho = 0;
 	} 
 	
-	public void inserir(ClasseInformadaProgramador i) {
+	public void inserir(Integer i) {
 		if(tamanho == info.length) {
 			redimensionar();
 		}
-		info[tamanho] = i;
-		tamanho ++;
+		if(obterElemento(tamanho) < i) {
+			info[tamanho] = i;
+			tamanho ++;
+		}
+		
 	}
 	
 	public void redimensionar() {
@@ -28,7 +31,7 @@ public class ListaEstatica <ClasseInformadaProgramador> {
 		info = infoRedimensionado;
 	}
 	
-	public int buscar(ClasseInformadaProgramador valor) {
+	public int buscar(Integer valor) {
 	    for (int i = 0; i < tamanho; i++)
 	        if (info[i].equals(valor))
 	            return i;
@@ -42,7 +45,7 @@ public class ListaEstatica <ClasseInformadaProgramador> {
 		}
 	}
 	
-	public void retirar(ClasseInformadaProgramador valor) {
+	public void retirar(Integer valor) {
 		int posicao = buscar(valor);
 		
 		if(posicao > -1) {
@@ -83,10 +86,10 @@ public class ListaEstatica <ClasseInformadaProgramador> {
 		return builder.toString();
 	}
 	
-	public ClasseInformadaProgramador obterElemento(int i) {
+	public int obterElemento(int i) {
 		if(i > tamanho) 
 			throw new IndexOutOfBoundsException("Não exite dados nesta posição!");
-		return info[i];
+		return (int) info[i];
 	}
 	
 	public void inverter() {

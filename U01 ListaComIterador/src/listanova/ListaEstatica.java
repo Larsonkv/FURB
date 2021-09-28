@@ -2,7 +2,7 @@ package listanova;
 
 import java.util.Iterator;
 
-public class ListaEstatica <ClasseInformadaProgramador> implements Iterable{
+public class ListaEstatica <ClasseInformadaProgramador> implements Iterable<ClasseInformadaProgramador>{
 
 	private ClasseInformadaProgramador[] info;
 	private int tamanho;

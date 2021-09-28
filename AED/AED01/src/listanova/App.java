@@ -5,20 +5,19 @@ import java.util.Scanner;
 public class App {
 
 	public static void main(String[] args) {
+		//-----------------------------------
+		//ListaEstatica<String> frutas = new ListaEstatica<>();
+		//frutas.inserir("abacate");
+		//frutas.inserir("morango");
+		//frutas.inserir("banana");
 		
-		ListaEstatica<String> frutas = new ListaEstatica<>();
-		frutas.inserir("abacate");
-		frutas.inserir("morango");
-		frutas.inserir("banana");
+	//	Scanner teclado = new Scanner(System.in);
+		//System.out.println("Informe o nome da fruta para pesquisar");
+		//String frutaPesquisar = teclado.nextLine();
 		
-		Scanner teclado = new Scanner(System.in);
-		System.out.println("Informe o nome da fruta para pesquisar");
-		String frutaPesquisar = teclado.nextLine();
+	//	int posicao = frutas.buscar(frutaPesquisar);
+		//System.out.println(posicao);
 		
-		int posicao = frutas.buscar(frutaPesquisar);
-		System.out.println(posicao);
-		
-		//------------------------------------------------------
 		
 		//ListaEstatica<Aluno> alunos = new ListaEstatica<>();
 		//alunos.inserir(new Aluno(10000, "Pedro"));
