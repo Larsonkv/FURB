@@ -80,7 +80,7 @@ public class Arvore<T> {
 			qtde += contarNos(p);
 			p = p.getProximo();
 		}
-		a
+		
 		return qtde;
 	}
 }
