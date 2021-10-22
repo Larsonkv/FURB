@@ -89,4 +89,21 @@ private int inicio;
 		
 		return f3;
 	}
+	
+	public void encolher(){
+	    T[] aux = (T[]) new Object[tamanho];
+	    int t = this.inicio;
+	    
+	    for(int i = 0; i < aux.length; i++){
+	    	
+	    	aux[i] = info[t];
+	    	
+	        t = (t+1)%limite;
+	}
+	    
+	    
+	    limite = aux.length;
+	    
+	    info = aux;
+	}
 }

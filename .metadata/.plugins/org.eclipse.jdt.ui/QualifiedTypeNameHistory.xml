@@ -6,4 +6,5 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.sun.jdi.Method"/>
     <fullyQualifiedTypeName name="NoArvoreBinaria"/>
+    <fullyQualifiedTypeName name="NoArvore"/>
 </qualifiedTypeNameHistroy>
