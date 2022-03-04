@@ -1,0 +1,7 @@
+Par de pontos mais Proximos
+	Cálculo de distância Euclidiana **
+	Distância de Hamming 
+
+Envoltoria Convexa
+	Cálculo de pontos extremos
+	Não convexo um dos ãngulos passa de 180 graus
