@@ -5,3 +5,36 @@ Par de pontos mais Proximos
 Envoltoria Convexa
 	Cálculo de pontos extremos
 	Não convexo um dos ãngulos passa de 180 graus
+	Grahan´s Scan 1972
+		- Ordenar pontos em x
+		- Calcular EC superior
+		- Calcular EC inferior
+		- Produto vetorial 
+	Gift Wrapping 1973
+		- Achar a menor coordenada em y
+		- Linha de suporte
+		- Procurar proximo ponto com menor angulo de counter-clock wise
+		- Ir salvando as linhas de suporte 
+	Divide-and-conquer
+		- Ordenar pontos em x
+		- Dividir em dois grupos com qtde semelhante
+		- Juntar os dois grupos MERGE
+	QuickHull 1996
+		- Achar pontos extremos
+		- Formar um quadrilatero com os pontos extremos	
+		- Processar os 4 triangulos recursivamente
+		- Encontrar o ponto com maior distancia da linha base do Quadrilatero
+
+	Exercicio 16/03/22
+	Calculo produto vetorial CCW..
+	Nas linguagens Python, C/C++, Java
+	
+Triangularização
+	Algoritmo de Van Gogh
+Triangulação de Delaunay
+Numero de triangulos 
+	N de vertices = N
+	N de vertices na envoltoria convexa = H
+	Triangulos = 2N - H - 2
+
+		
