@@ -103,18 +103,21 @@ public class ListaEncadeada <T>{
 		return resultado;
 	}
 	
-	public void retirarTodos(T valor) {
-		
+	public void retirarTodos(T valor){
+		NoLista<T> anterior = null;
 		NoLista<T> p = primeiro;
-		while(p!=null) {
-			NoLista<T> backup;
-			backup = p.getProximo();
-			
-			if(p.getProximo().info == valor) {
-				retirar(backup.info);
-				backup = p.getProximo();
-			}
-			p=backup;
+
+		while(p!=null){
+			if(p.getInfo().equals(valor)){
+				if(anterior == null){
+					this.primeiro = p.getProximo();
+				}else{
+					anterior.setProximo(p.getProximo());
+				}
+			}else{
+		   anterior = p;
+		  }
+		 p=p.getProximo();
 		}
 	}
 		
